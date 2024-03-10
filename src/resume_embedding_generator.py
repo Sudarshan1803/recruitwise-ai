@@ -2,7 +2,7 @@ import os
 import openai
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = 'API-KEY'
 
 def generate_embeddings(input_directory, output_directory):
     if not os.path.exists(output_directory):
