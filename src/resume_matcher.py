@@ -4,7 +4,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import spacy
 
 def preprocess_text(text):
-    # Implement text preprocessing here (similar to what you did before)
     return text
 
 def generate_embeddings(input_directory):
@@ -47,8 +46,8 @@ def match_job(job_description, resume_embeddings, filenames):
 
 def main():
     # Define input directories
-    job_description_file = "job_description_embeddings.txt"  # Update with your job description file
-    resumes_directory = "preprocessed_resumes"  # Update with your preprocessed resumes directory
+    job_description_file = "job_description_embeddings.txt"
+    resumes_directory = "preprocessed_resumes"
 
     # Generate embeddings for resumes
     resume_embeddings, filenames = generate_embeddings(resumes_directory)
