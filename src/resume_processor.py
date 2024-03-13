@@ -29,7 +29,7 @@ def preprocess_pdf(pdf_path):
         pdf_reader = PyPDF2.PdfReader(file)
         text = ''
         for page_num in range(len(pdf_reader.pages)):
-            text += pdf_reader.pages[page_num].extract_text()
+            text += pdf_reader.pages[page_num].extract_text() + '\n'
     return preprocess_text(text)
 
 def preprocess_docx(docx_path):
@@ -66,14 +66,3 @@ def preprocess_resume_directory(input_directory, output_directory):
         print(f'Preprocessed: {filename}')
 
     print('Preprocessing complete.')
-
-def main():
-    # Define input and output directories
-    input_directory = 'resumes'
-    output_directory = 'preprocessed_resumes'
-
-    # Preprocess resumes
-    preprocess_resume_directory(input_directory, output_directory)
-
-if __name__ == "__main__":
-    main()
